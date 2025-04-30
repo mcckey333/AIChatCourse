@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A47FD5772DBEFA8600E560EC /* .swiftlint 2.yml in Resources */ = {isa = PBXBuildFile; fileRef = A47FD5762DBEFA8600E560EC /* .swiftlint 2.yml */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		A4A6317B2DB9C80700D6C89F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A47FD5762DBEFA8600E560EC /* .swiftlint 2.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = ".swiftlint 2.yml"; sourceTree = "<group>"; };
 		A4A6316D2DB9C80300D6C89F /* AIChatCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIChatCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A6317A2DB9C80700D6C89F /* AIChatCourseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AIChatCourseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A631842DB9C80700D6C89F /* AIChatCourseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AIChatCourseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +93,7 @@
 		A4A631642DB9C80300D6C89F = {
 			isa = PBXGroup;
 			children = (
+				A47FD5762DBEFA8600E560EC /* .swiftlint 2.yml */,
 				A4A6316F2DB9C80300D6C89F /* AIChatCourse */,
 				A4A6317D2DB9C80700D6C89F /* AIChatCourseTests */,
 				A4A631872DB9C80700D6C89F /* AIChatCourseUITests */,
@@ -115,6 +121,7 @@
 				A4A631692DB9C80300D6C89F /* Sources */,
 				A4A6316A2DB9C80300D6C89F /* Frameworks */,
 				A4A6316B2DB9C80300D6C89F /* Resources */,
+				A4A6319D2DB9ED2C00D6C89F /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -225,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A47FD5772DBEFA8600E560EC /* .swiftlint 2.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +251,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A4A6319D2DB9ED2C00D6C89F /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -z \"$CI\" ]]; then\n    if [[ \"$(uname -m)\" == arm64 ]]; then\n        export PATH=\"/opt/homebrew/bin:$PATH\"\n    fi\n\n    # Check if running in a SwiftUI preview\n    if [ \"$XCODE_RUNNING_FOR_PREVIEWS\" != \"1\" ]; then\n        if which swiftlint > /dev/null; then\n            swiftlint # Uncomment if you want to auto-fix: swiftlint --fix &&\n        else\n            echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n        fi\n    fi\nelse \n    # Running Xcode Cloud\n    echo \"Running in Xcode Cloud. Skipping SwiftLint.\"\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A4A631692DB9C80300D6C89F /* Sources */ = {
@@ -320,7 +350,7 @@
 				DEVELOPMENT_TEAM = K5FQ9U5MDG;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -384,7 +414,7 @@
 				DEVELOPMENT_TEAM = K5FQ9U5MDG;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

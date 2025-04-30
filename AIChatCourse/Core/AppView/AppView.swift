@@ -8,31 +8,8 @@
 import SwiftUI
 // tabbar - signed in
 // onboarding - signed out
-
-struct AppViewBuilder<TabbarView: View, OnboardingView: View>: View {
-    var showTabBar: Bool = false
-    @ViewBuilder var tabbarView: TabbarView
-    @ViewBuilder var onboardingView: OnboardingView
-    var body: some View {
-        ZStack {
-            if showTabBar {
-                ZStack {
-                    Color.red.ignoresSafeArea()
-                    Text("Tabbar")
-                }
-                .transition(.move(edge: .trailing))
-            } else {
-                ZStack {
-                    Color.blue.ignoresSafeArea()
-                    Text("Onboarding")
-                }
-            }
-        }
-        .animation(.smooth, value: showTabBar)
-    }
-}
 struct AppView: View {
-    @State private var showTabBar: Bool = false
+    @AppStorage("showTabbarView") var showTabBar: Bool = false
     var body: some View {
         AppViewBuilder(
             showTabBar: showTabBar,
@@ -43,12 +20,8 @@ struct AppView: View {
                 }
             },
             onboardingView: {
-                ZStack {
-                    Color.blue.ignoresSafeArea()
-                    Text("Onboarding")
-                }
+                WelcomeView()
             }
-            
         )
         .onTapGesture {
             showTabBar.toggle()
@@ -56,6 +29,9 @@ struct AppView: View {
     }
 }
 
-#Preview {
-    AppView()
+#Preview("AppView - Tabbar") {
+    AppView(showTabBar: false)
+}
+#Preview("AppView - Onboarding") {
+    AppView(showTabBar: false)
 }
