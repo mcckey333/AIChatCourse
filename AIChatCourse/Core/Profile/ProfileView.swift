@@ -20,7 +20,7 @@ struct ProfileView: View {
                 }
         }
         .sheet(isPresented: $showSettingsView) {
-            Text("SettingsView")
+            SettingsView()
         }
         .tabItem {
             Label("Profile", systemImage: "person.fill")

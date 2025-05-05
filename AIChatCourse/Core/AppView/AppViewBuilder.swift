@@ -7,22 +7,15 @@
 import SwiftUI
 
 struct AppViewBuilder<TabbarView: View, OnboardingView: View>: View {
-    var showTabBar: Bool = false
+    var showTabBar: Bool = true
     @ViewBuilder var tabbarView: TabbarView
     @ViewBuilder var onboardingView: OnboardingView
     var body: some View {
         ZStack {
             if showTabBar {
-                ZStack {
-                    Color.red.ignoresSafeArea()
-                    Text("Tabbar")
-                }
-                .transition(.move(edge: .trailing))
+                TabBarView()
             } else {
-                ZStack {
-                    Color.blue.ignoresSafeArea()
-                    Text("Onboarding")
-                }
+                WelcomeView()
             }
         }
         .animation(.smooth, value: showTabBar)

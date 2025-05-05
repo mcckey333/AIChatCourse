@@ -6,10 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		A47FD5772DBEFA8600E560EC /* .swiftlint 2.yml in Resources */ = {isa = PBXBuildFile; fileRef = A47FD5762DBEFA8600E560EC /* .swiftlint 2.yml */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
 		A4A6317B2DB9C80700D6C89F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -28,7 +24,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A47FD5762DBEFA8600E560EC /* .swiftlint 2.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = ".swiftlint 2.yml"; sourceTree = "<group>"; };
 		A4A6316D2DB9C80300D6C89F /* AIChatCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIChatCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A6317A2DB9C80700D6C89F /* AIChatCourseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AIChatCourseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A631842DB9C80700D6C89F /* AIChatCourseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AIChatCourseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,7 +88,6 @@
 		A4A631642DB9C80300D6C89F = {
 			isa = PBXGroup;
 			children = (
-				A47FD5762DBEFA8600E560EC /* .swiftlint 2.yml */,
 				A4A6316F2DB9C80300D6C89F /* AIChatCourse */,
 				A4A6317D2DB9C80700D6C89F /* AIChatCourseTests */,
 				A4A631872DB9C80700D6C89F /* AIChatCourseUITests */,
@@ -232,7 +226,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A47FD5772DBEFA8600E560EC /* .swiftlint 2.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +248,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		A4A6319D2DB9ED2C00D6C89F /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
