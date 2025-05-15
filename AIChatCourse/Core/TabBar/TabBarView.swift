@@ -9,14 +9,18 @@ import SwiftUI
 
 struct TabBarView: View {
     var body: some View {
-        TabView {
-            ExploreView()
-            ChatsView()
-            ProfileView()
+        NavigationStack {
+            TabView {
+                ExploreView()
+                ChatsView()
+                ProfileView()
+            }
         }
     }
 }
 
 #Preview {
-    TabBarView()
+    NavigationStack {
+        TabBarView()
+    }
 }

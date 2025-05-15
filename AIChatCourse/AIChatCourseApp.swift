@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct AIChatCourseApp: App {
+    @State private var appState = AppState()
     var body: some Scene {
         WindowGroup {
-            WelcomeView()
+            AppView(appState: appState)
+                .environment(appState)
         }
     }
 }

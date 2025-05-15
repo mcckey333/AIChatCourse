@@ -9,20 +9,29 @@ import SwiftUI
 
 struct AppView: View {
     
-    @State var appState: AppState = AppState()
+    @State var appState: AppState
     var body: some View {
-        AppViewBuilder(
-            showTabBar: appState.showTabBar,
-            tabbarView: {
-                TabBarView()
-            },
-            onboardingView: {
-                WelcomeView()
-            }
-        )
-        .environment(appState)
+        VStack {
+            Text("TabBar: \(appState.showTabBar.description)")
+                .onAppear {
+                    print("🔍 Initial showTabBar: \(appState.showTabBar)")
+                }
+                .onChange(of: appState.showTabBar) { newValue in
+                    print("🔥 showTabBar changed to \(newValue)")
+                }
+        }
+            
+            AppViewBuilder(
+                tabbarView: {
+                    TabBarView()
+                },
+                onboardingView: {
+                    WelcomeView()
+                }
+            )
+        }
     }
-}
+
 
 #Preview("AppView - Tabbar") {
     AppView(appState: AppState(showTabBar: true))

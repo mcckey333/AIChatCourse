@@ -36,6 +36,7 @@ struct OnboardingIntroView: View {
                 }
             }
             .font(.title3)
+            .toolbar(.hidden, for: .navigationBar)
         
     }
 }
@@ -43,5 +44,6 @@ struct OnboardingIntroView: View {
 #Preview {
     NavigationStack {
         OnboardingIntroView()
+            .environment(AppState())
     }
 }
