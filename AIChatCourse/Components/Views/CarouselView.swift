@@ -50,6 +50,7 @@ struct CarouselView<Content: View, T: Hashable>: View {
                         .frame(width: 8, height: 8)
                 }
             }
+            .frame(maxWidth: .infinity, alignment: .center)
             .animation(.linear, value: selection)
             
         }
