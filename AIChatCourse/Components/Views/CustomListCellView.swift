@@ -28,7 +28,6 @@ struct CustomListCellView: View {
             .frame(height: 60)
             .cornerRadius(16)
             
-                
             VStack(alignment: .leading, spacing: 4) {
                 if let title {
                     Text(title)

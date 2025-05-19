@@ -19,8 +19,6 @@ struct ExploreView: View {
                 featuredSection
                 categorySection
                 popularSection
-                
-               
             }
             .navigationTitle("Explore")
         }
@@ -46,7 +44,7 @@ struct ExploreView: View {
         Section(header: Text("Categories")) {
             ZStack {
                 ScrollView(.horizontal) {
-                    HStack(spacing: 12)  {
+                    HStack(spacing: 12) {
                         ForEach(categories, id: \.self) { category in
                             CategoryCellView(title: category.rawValue.capitalized, imageName: Constants.randomImage)
                         }

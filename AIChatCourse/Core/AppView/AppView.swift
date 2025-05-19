@@ -32,7 +32,6 @@ struct AppView: View {
         }
     }
 
-
 #Preview("AppView - Tabbar") {
     AppView(appState: AppState(showTabBar: true))
 }
