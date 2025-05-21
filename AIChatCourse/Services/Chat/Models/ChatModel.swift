@@ -13,10 +13,10 @@ struct ChatModel: Identifiable {
     let dateCreated: Date
     let dateModified: Date
 
-    static var mock: ChatModel {
+    static var mock: Self {
         mocks[0]
     }
-    static var mocks: [ChatModel] {
+    static var mocks: [Self] {
         let now = Date()
         return [
             ChatModel(
