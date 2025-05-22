@@ -10,6 +10,7 @@ import SwiftUI
 struct WelcomeView: View {
     
     @State private var imageName: String = Constants.randomImage
+    @State private var showSignInView: Bool = false
     
     var body: some View {
         NavigationStack {
@@ -23,6 +24,13 @@ struct WelcomeView: View {
                 policyLinks
                 Spacer()
             }
+        }
+        .sheet(isPresented: $showSignInView) {
+            CreateAccountView(
+                title: "Sign In",
+                subtitle: "Connect to an existing account"
+            )
+                .presentationDetents([.medium])
         }
     }
     
@@ -51,7 +59,7 @@ struct WelcomeView: View {
                 .font(.body)
                 .padding(8)
                 .onTapGesture {
-                    
+                    onSignInPressed()
                 }
         }
     }
@@ -66,8 +74,11 @@ struct WelcomeView: View {
             Link(destination: URL(string: Constants.privacyPolicyUrl)!) {
                 Text("Privacy Policy")
             }
-            
         }
+    }
+    
+    private func onSignInPressed() {
+        showSignInView = true
     }
 }
 
