@@ -62,7 +62,7 @@ struct ChatMessageModel: Identifiable {
             ChatMessageModel(
                 id: "msg3",
                 chatId: "chat2",
-                authorId: "user3",
+                authorId: "user1",
                 content: "Meeting is rescheduled to tomorrow.",
                 seenByIds: ["user4", "user5"],
                 dateCreated: now.addingTime(hours: -3)
@@ -70,7 +70,7 @@ struct ChatMessageModel: Identifiable {
             ChatMessageModel(
                 id: "msg4",
                 chatId: "chat3",
-                authorId: "user4",
+                authorId: "user2",
                 content: "Sounds good. Let's do it.",
                 seenByIds: nil,
                 dateCreated: now.addingTime(days: -1, hours: -2)

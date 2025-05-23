@@ -40,25 +40,25 @@ struct UserModel {
         let now = Date()
         return [
             UserModel(
-                userId: "user_001",
+                userId: "user1",
                 dateCreated: now.addingTime(days: -1, hours: -2), // 1 day 2 hours ago
                 didCompleteOnboarding: true,
                 profileColorHex: "#FFC0CB"
             ),
             UserModel(
-                userId: "user_002",
+                userId: "user2",
                 dateCreated: now.addingTime(hours: -6), // 6 hours ago
                 didCompleteOnboarding: false,
                 profileColorHex: "#87CEEB"
             ),
             UserModel(
-                userId: "user_003",
+                userId: "user1",
                 dateCreated: now.addingTime(days: -3, minutes: -15), // 3 days 15 minutes ago
                 didCompleteOnboarding: true,
                 profileColorHex: "#98FB98"
             ),
             UserModel(
-                userId: "user_004",
+                userId: "user2",
                 dateCreated: nil,
                 didCompleteOnboarding: nil,
                 profileColorHex: nil
@@ -66,4 +66,3 @@ struct UserModel {
         ]
     }
 }
-

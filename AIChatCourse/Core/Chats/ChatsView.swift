@@ -16,7 +16,7 @@ struct ChatsView: View {
             List {
                 ForEach(chats) { chat in
                     ChatRowCellViewBuilder(
-                        currentUserId: nil, //FIXME: Add cuid
+                        currentUserId: nil, // FIXME: Add cuid
                         chat: chat,
                         getAvatar: {
                             try? await Task.sleep(for: .seconds(1))

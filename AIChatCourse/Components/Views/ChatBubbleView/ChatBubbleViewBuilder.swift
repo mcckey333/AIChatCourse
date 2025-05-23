@@ -21,7 +21,6 @@ struct ChatBubbleViewBuilder: View {
                 showImage: !isCurrentUser
             )
             .frame(maxWidth: .infinity, alignment: isCurrentUser ? .trailing : .leading)
-            .background(Color.orange)
             .padding(.leading, isCurrentUser ? 75: 0)
             .padding(.trailing, isCurrentUser ? 0: 75)
     }

@@ -12,7 +12,7 @@ struct ChatBubbleView: View {
     var text: String = "This is a sample text."
     var textColor: Color = .primary
     var backgroundColor: Color = Color(uiColor: .systemGray6)
-    var imageName: String? = nil
+    var imageName: String?
     let offset: CGFloat = 14
     var showImage: Bool = true
     
@@ -40,6 +40,7 @@ struct ChatBubbleView: View {
                 .cornerRadius(6)
         }
         .padding(.bottom, showImage ? offset : 0)
+        
     }
 }
 #Preview {

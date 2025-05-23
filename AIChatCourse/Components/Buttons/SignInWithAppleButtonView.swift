@@ -57,15 +57,13 @@ private struct SignInWithAppleButtonViewRepresentable: UIViewRepresentable {
 #Preview("SignInWithAppleButtonView") {
     ZStack {
     
-
         VStack(spacing: 4) {
             SignInWithAppleButtonView(
                 type: .signIn,
                 style: .black, cornerRadius: 10)
                 .frame(height: 50)
-                
 
-//            SignInWithGoogleButtonView(
+//           SignInWithGoogleButtonView(
 //                type: .signIn,
 //                style: .white, cornerRadius: 30)
 //                .frame(height: 50)
