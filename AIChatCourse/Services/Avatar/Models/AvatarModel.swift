@@ -8,7 +8,7 @@
 import Foundation
 
 struct AvatarModel: Hashable {
-    
+    let id = UUID() 
     let avatarId: String
     let name: String?
     let characterOption: CharacterOption?
