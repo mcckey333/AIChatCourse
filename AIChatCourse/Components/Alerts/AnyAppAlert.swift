@@ -7,7 +7,7 @@
 import Foundation
 import SwiftUI
 
-struct AnyAppAlert {
+struct AnyAppAlert: Sendable {
     var title: String
     var subtitle: String?
     var buttons: @Sendable () -> AnyView
