@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A404FA6B2DF6D7C200560EB6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A404FA6A2DF6D7C200560EB6 /* GoogleService-Info.plist */; };
+		A404FA6E2DF6D8AC00560EB6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A404FA6D2DF6D8AC00560EB6 /* FirebaseAuth */; };
 		A43F35982DC9C2C4000C6CB9 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = A43F35972DC9C2C4000C6CB9 /* SDWebImageSwiftUI */; };
 		A47481BA2DDEC3AA0031B98A /* SwiftfulUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = A47481B92DDEC3AA0031B98A /* SwiftfulUtilities */; };
 /* End PBXBuildFile section */
@@ -29,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A404FA6A2DF6D7C200560EB6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A4A6316D2DB9C80300D6C89F /* AIChatCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIChatCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A6317A2DB9C80700D6C89F /* AIChatCourseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AIChatCourseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A631842DB9C80700D6C89F /* AIChatCourseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AIChatCourseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A43F35982DC9C2C4000C6CB9 /* SDWebImageSwiftUI in Frameworks */,
+				A404FA6E2DF6D8AC00560EB6 /* FirebaseAuth in Frameworks */,
 				A47481BA2DDEC3AA0031B98A /* SwiftfulUtilities in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,6 +103,7 @@
 				A4A6317D2DB9C80700D6C89F /* AIChatCourseTests */,
 				A4A631872DB9C80700D6C89F /* AIChatCourseUITests */,
 				A4A6316E2DB9C80300D6C89F /* Products */,
+				A404FA6A2DF6D7C200560EB6 /* GoogleService-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +140,7 @@
 			packageProductDependencies = (
 				A43F35972DC9C2C4000C6CB9 /* SDWebImageSwiftUI */,
 				A47481B92DDEC3AA0031B98A /* SwiftfulUtilities */,
+				A404FA6D2DF6D8AC00560EB6 /* FirebaseAuth */,
 			);
 			productName = AIChatCourse;
 			productReference = A4A6316D2DB9C80300D6C89F /* AIChatCourse.app */;
@@ -221,6 +227,7 @@
 			packageReferences = (
 				A43F35962DC9C2C4000C6CB9 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				A47481B62DDEC2D90031B98A /* XCRemoteSwiftPackageReference "SwiftfulUtilities" */,
+				A404FA6C2DF6D8AC00560EB6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A4A6316E2DB9C80300D6C89F /* Products */;
@@ -239,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A404FA6B2DF6D7C200560EB6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,6 +636,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A404FA6C2DF6D8AC00560EB6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.14.0;
+			};
+		};
 		A43F35962DC9C2C4000C6CB9 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
@@ -647,6 +663,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A404FA6D2DF6D8AC00560EB6 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A404FA6C2DF6D8AC00560EB6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
 		A43F35972DC9C2C4000C6CB9 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A43F35962DC9C2C4000C6CB9 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
