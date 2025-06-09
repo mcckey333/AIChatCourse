@@ -14,7 +14,7 @@ struct AvatarModel: Hashable {
     let characterOption: CharacterOption?
     let characterAction: CharacterAction?
     let characterLocation: CharacterLocation?
-    let profileImageName: String?
+    var profileImageName: String?
     let authorId: String?
     let dateCreated: Date?
     init(
