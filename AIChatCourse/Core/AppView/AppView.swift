@@ -6,22 +6,14 @@
 //
 
 import SwiftUI
-
 struct AppView: View {
     
-    @State var appState: AppState
+    @Environment(\.authService) private var authService
+    @State var appState: AppState = AppState()
+    
     var body: some View {
-        VStack {
-            Text("TabBar: \(appState.showTabBar.description)")
-                .onAppear {
-                    print("🔍 Initial showTabBar: \(appState.showTabBar)")
-                }
-                .onChange(of: appState.showTabBar) { newValue in
-                    print("🔥 showTabBar changed to \(newValue)")
-                }
-        }
-            
-            AppViewBuilder(
+        print("App view body is running")
+            return AppViewBuilder(
                 tabbarView: {
                     TabBarView()
                 },
@@ -29,7 +21,27 @@ struct AppView: View {
                     WelcomeView()
                 }
             )
+            .environment(appState)
+            .task {
+                print("Starting check") 
+                await checkUserStatus()
+            }
         }
+    private func checkUserStatus() async {
+        if let user = authService.getAuthenticatedUser() {
+            // User is authenticated
+            print("User already authenticated: \(user.uid)")
+        } else {
+            // User is not authenticated
+            do {
+                let result = try await authService.signInAnonymously()
+                print("Sign In Anonymous success: \(result.user.uid)")
+            }
+            catch {
+                print(error)
+            }
+        }
+    }
     }
 
 #Preview("AppView - Tabbar") {

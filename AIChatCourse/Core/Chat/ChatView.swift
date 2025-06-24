@@ -123,6 +123,7 @@ struct ChatView: View {
             scrollPosition = message.id
             
             textFieldText = ""
+            print("message sent") 
         } catch {
             showAlert = AnyAppAlert(error: error)
         }

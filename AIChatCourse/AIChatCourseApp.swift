@@ -12,11 +12,13 @@ struct AIChatCourseApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
-    @State private var appState = AppState()
+    init() {
+        print("✅ AIChatCourseApp init runs!")
+    }
+
     var body: some Scene {
         WindowGroup {
-            AppView(appState: appState)
-                .environment(appState)
+            AppView()
         }
     }
 }
