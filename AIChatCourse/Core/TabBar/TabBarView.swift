@@ -9,15 +9,24 @@ import SwiftUI
 
 struct TabBarView: View {
     var body: some View {
-        NavigationStack {
-            TabView {
-                ExploreView()
-                ChatsView()
-                ProfileView()
+                TabView {
+                    NavigationStack {
+                        ExploreView()
+                    }
+                    .tabItem { Label("Explore", systemImage: "magnifyingglass") }
+
+                    NavigationStack {
+                        ChatsView()
+                    }
+                    .tabItem { Label("Chats", systemImage: "message") }
+
+                    NavigationStack {
+                        ProfileView()
+                    }
+                    .tabItem { Label("Profile", systemImage: "person") }
+                }
             }
         }
-    }
-}
 
 #Preview {
     NavigationStack {

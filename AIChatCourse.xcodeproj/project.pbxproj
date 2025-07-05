@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A404FA6B2DF6D7C200560EB6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A404FA6A2DF6D7C200560EB6 /* GoogleService-Info.plist */; };
 		A404FA6E2DF6D8AC00560EB6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A404FA6D2DF6D8AC00560EB6 /* FirebaseAuth */; };
 		A43F35982DC9C2C4000C6CB9 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = A43F35972DC9C2C4000C6CB9 /* SDWebImageSwiftUI */; };
+		A45A0C232E0C112100460769 /* SignInAppleAsync in Frameworks */ = {isa = PBXBuildFile; productRef = A45A0C222E0C112100460769 /* SignInAppleAsync */; };
 		A47481BA2DDEC3AA0031B98A /* SwiftfulUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = A47481B92DDEC3AA0031B98A /* SwiftfulUtilities */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +31,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A404FA6A2DF6D7C200560EB6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A4A6316D2DB9C80300D6C89F /* AIChatCourse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIChatCourse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A6317A2DB9C80700D6C89F /* AIChatCourseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AIChatCourseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A631842DB9C80700D6C89F /* AIChatCourseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AIChatCourseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A45A0C232E0C112100460769 /* SignInAppleAsync in Frameworks */,
 				A43F35982DC9C2C4000C6CB9 /* SDWebImageSwiftUI in Frameworks */,
 				A404FA6E2DF6D8AC00560EB6 /* FirebaseAuth in Frameworks */,
 				A47481BA2DDEC3AA0031B98A /* SwiftfulUtilities in Frameworks */,
@@ -103,7 +103,6 @@
 				A4A6317D2DB9C80700D6C89F /* AIChatCourseTests */,
 				A4A631872DB9C80700D6C89F /* AIChatCourseUITests */,
 				A4A6316E2DB9C80300D6C89F /* Products */,
-				A404FA6A2DF6D7C200560EB6 /* GoogleService-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +140,7 @@
 				A43F35972DC9C2C4000C6CB9 /* SDWebImageSwiftUI */,
 				A47481B92DDEC3AA0031B98A /* SwiftfulUtilities */,
 				A404FA6D2DF6D8AC00560EB6 /* FirebaseAuth */,
+				A45A0C222E0C112100460769 /* SignInAppleAsync */,
 			);
 			productName = AIChatCourse;
 			productReference = A4A6316D2DB9C80300D6C89F /* AIChatCourse.app */;
@@ -228,6 +228,7 @@
 				A43F35962DC9C2C4000C6CB9 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				A47481B62DDEC2D90031B98A /* XCRemoteSwiftPackageReference "SwiftfulUtilities" */,
 				A404FA6C2DF6D8AC00560EB6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				A45A0C212E0C10D200460769 /* XCRemoteSwiftPackageReference "SignInAppleAsync" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A4A6316E2DB9C80300D6C89F /* Products */;
@@ -246,7 +247,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A404FA6B2DF6D7C200560EB6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,44 +453,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AIChatCourse/AIChatCourse.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K5FQ9U5MDG;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AIChatCourse/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "AI Chat";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.helloyou.test.AIChatCourse;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = YES;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		A4A631902DB9C80700D6C89F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JY4CSSWNLK;
@@ -510,7 +474,45 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.helloyou.test.AIChatCourse;
+				PRODUCT_BUNDLE_IDENTIFIER = com.helloyou.test.AIChatCourseIII;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A4A631902DB9C80700D6C89F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AIChatCourse/AIChatCourse.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JY4CSSWNLK;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AIChatCourse/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "AI Chat";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.helloyou.test.AIChatCourseIII;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = YES;
@@ -652,6 +654,14 @@
 				minimumVersion = 3.1.3;
 			};
 		};
+		A45A0C212E0C10D200460769 /* XCRemoteSwiftPackageReference "SignInAppleAsync" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftfulThinking/SignInAppleAsync.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
 		A47481B62DDEC2D90031B98A /* XCRemoteSwiftPackageReference "SwiftfulUtilities" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulUtilities.git";
@@ -672,6 +682,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A43F35962DC9C2C4000C6CB9 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		A45A0C222E0C112100460769 /* SignInAppleAsync */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SignInAppleAsync;
 		};
 		A47481B92DDEC3AA0031B98A /* SwiftfulUtilities */ = {
 			isa = XCSwiftPackageProductDependency;
